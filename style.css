@@ -1,0 +1,455 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4fbf9;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #033b18, #0c5b2b);
+  color: #fff;
+  padding-bottom: 70px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu li:hover {
+  color: #9fe77f;
+}
+
+.icons {
+  display: flex;
+  gap: 18px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.icons span {
+  transition: 0.3s;
+}
+
+.icons span:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #011204c0;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.primary {
+  background: #fff;
+  color: #0b5326;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.feature {
+  grid-column: span 2;
+}
+
+.feature img {
+  height: 260px;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #0c5b2b;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.info {
+  padding: 18px;
+  color: #333;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.head h2 {
+  font-size: 34px;
+  color: #0b4b38;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.item {
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+}
+
+.item:hover {
+  transform: translateY(-6px);
+}
+
+.item > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s;
+}
+
+.item:hover > img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: static;
+  background: #fff;
+  color: #222;
+  padding: 18px;
+  display: block;
+  opacity: 1;
+}
+
+.overlay h3 {
+  color: #0b4b38;
+  margin-bottom: 5px;
+}
+
+.overlay h2 {
+  font-size: 20px;
+  color: #0b4b38;
+  margin: 8px 0;
+}
+
+.overlay p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.stands {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.stand {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.35s;
+}
+
+.stand:hover {
+  transform: translateY(-8px);
+}
+
+.stand img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.stand:hover img {
+  transform: scale(1.06);
+}
+
+.services {
+  background: #0b4b38;
+  color: #fff;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 35px;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-6px);
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+
+.review {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter {
+  background: #dff5e8;
+  padding: 55px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  color: #0b4b38;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.newsletter input {
+  padding: 15px;
+  width: 300px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.newsletter input:focus {
+  box-shadow: 0 0 0 2px #0b4b38;
+}
+
+footer {
+  background: #062f1d;
+  color: #fff;
+  padding: 35px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.img {
+  width: 100px;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stands,
+  .service-grid,
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+
+  nav {
+    padding: 18px 0;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .icons {
+    font-size: 18px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    grid-column: span 1;
+  }
+
+  .gallery,
+  .stands,
+  .service-grid,
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .item > img {
+    height: 250px;
+  }
+
+  .stand img {
+    height: 280px;
+  }
+
+  .newsletter {
+    padding: 35px 20px;
+  }
+
+  .newsletter h2 {
+    font-size: 28px;
+  }
+
+  .newsletter input {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
